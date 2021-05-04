@@ -1,0 +1,11 @@
+*.rpt
+*.rpt.gz
+*.log*
+*~
+*.ddc
+*.cmd*
+*.mw
+icc2_output.txt
+check_design.ems
+.nfs*
+apr/work
