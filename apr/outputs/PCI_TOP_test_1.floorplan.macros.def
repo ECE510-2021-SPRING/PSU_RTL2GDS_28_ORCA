@@ -1,0 +1,2181 @@
+# 
+# IC Compiler II write_def
+# Release      : Q-2019.12-SP4
+# User Name    : sdurga2
+# Date         : Mon Aug 10 16:18:37 2020
+# 
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN PCI_TOP ;
+UNITS DISTANCE MICRONS 1000 ;
+PROPERTYDEFINITIONS
+COMPONENTPIN ACCESS_DIRECTION STRING ;
+END PROPERTYDEFINITIONS
+DIEAREA ( 0 0 ) ( 0 423016 ) ( 197690 423016 ) ( 197690 190000 ) ( 408270 190000 ) ( 408270 0 ) ;
+COMPONENTMASKSHIFT MRDL VIARDL M9 VIA8 M8 VIA7 M7 VIA6 M6 VIA5 M5 VIA4 M4 VIA3 M3 VIA2 M2 VIA1 M1 CO PO NWELL ;
+COMPONENTS 16 ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1 SRAM2RW32x4 + FIXED ( 2540 1672 ) FS ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2 SRAM2RW32x4 + FIXED ( 72145 1672 ) FS ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3 SRAM2RW32x4 + FIXED ( 2540 71607 ) N ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_4 SRAM2RW32x4 + FIXED ( 72145 71607 ) N ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5 SRAM2RW32x4 + FIXED ( 141750 1672 ) FS ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6 SRAM2RW32x4 + FIXED ( 141750 71607 ) N ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7 SRAM2RW32x4 + FIXED ( 211355 1672 ) N ;
+ - I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8 SRAM2RW32x4 + FIXED ( 211355 71607 ) N ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_1 SRAM2RW32x4 + FIXED ( 2540 141542 ) FS ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_2 SRAM2RW32x4 + FIXED ( 72145 141542 ) FS ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_3 SRAM2RW32x4 + FIXED ( 2540 211477 ) N ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_4 SRAM2RW32x4 + FIXED ( 72145 211477 ) N ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_5 SRAM2RW32x4 + FIXED ( 2540 281412 ) FS ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_6 SRAM2RW32x4 + FIXED ( 72145 281412 ) FS ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_7 SRAM2RW32x4 + FIXED ( 2540 351347 ) N ;
+ - I_PCI_READ_FIFO_PCI_FIFO_RAM_8 SRAM2RW32x4 + FIXED ( 72145 351347 ) N ;
+END COMPONENTS
+PINS 430 ;
+ - pclk + NET pclk + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 10612 ) N ;
+ - pci_rst_n + NET pci_rst_n + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 139812 ) N ;
+ - pidsel + NET pidsel + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 245148 0 ) N ;
+ - pgnt_n + NET pgnt_n + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 256092 0 ) N ;
+ - pad_in[31] + NET pad_in[31] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 377540 0 ) N ;
+ - pad_in[30] + NET pad_in[30] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 314916 0 ) N ;
+ - pad_in[29] + NET pad_in[29] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 235268 0 ) N ;
+ - pad_in[28] + NET pad_in[28] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 325252 0 ) N ;
+ - pad_in[27] + NET pad_in[27] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 283908 0 ) N ;
+ - pad_in[26] + NET pad_in[26] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252900 0 ) N ;
+ - pad_in[25] + NET pad_in[25] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 304580 0 ) N ;
+ - pad_in[24] + NET pad_in[24] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 263236 0 ) N ;
+ - pad_in[23] + NET pad_in[23] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 245452 0 ) N ;
+ - pad_in[22] + NET pad_in[22] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 356868 0 ) N ;
+ - pad_in[21] + NET pad_in[21] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255636 0 ) N ;
+ - pad_in[20] + NET pad_in[20] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 367204 0 ) N ;
+ - pad_in[19] + NET pad_in[19] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 273572 0 ) N ;
+ - pad_in[18] + NET pad_in[18] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 335588 0 ) N ;
+ - pad_in[17] + NET pad_in[17] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 294244 0 ) N ;
+ - pad_in[16] + NET pad_in[16] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 345924 0 ) N ;
+ - pad_in[15] + NET pad_in[15] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 377844 0 ) N ;
+ - pad_in[14] + NET pad_in[14] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 296372 0 ) N ;
+ - pad_in[13] + NET pad_in[13] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 367660 0 ) N ;
+ - pad_in[12] + NET pad_in[12] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 286188 0 ) N ;
+ - pad_in[11] + NET pad_in[11] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 388028 0 ) N ;
+ - pad_in[10] + NET pad_in[10] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 265820 0 ) N ;
+ - pad_in[9] + NET pad_in[9] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 387876 0 ) N ;
+ - pad_in[8] + NET pad_in[8] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 276004 0 ) N ;
+ - pad_in[7] + NET pad_in[7] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 398212 0 ) N ;
+ - pad_in[6] + NET pad_in[6] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 326924 0 ) N ;
+ - pad_in[5] + NET pad_in[5] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 387876 0 ) N ;
+ - pad_in[4] + NET pad_in[4] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 316740 0 ) N ;
+ - pad_in[3] + NET pad_in[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 398212 0 ) N ;
+ - pad_in[2] + NET pad_in[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 337108 0 ) N ;
+ - pad_in[1] + NET pad_in[1] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 398212 0 ) N ;
+ - pad_in[0] + NET pad_in[0] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 306556 0 ) N ;
+ - pad_en + NET pad_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 220068 ) N ;
+ - ppar_in + NET ppar_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 245300 0 ) N ;
+ - ppar_out + NET ppar_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 219764 ) N ;
+ - ppar_en + NET ppar_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 219460 ) N ;
+ - pc_be_in[3] + NET pc_be_in[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 214900 0 ) N ;
+ - pc_be_in[2] + NET pc_be_in[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 357476 0 ) N ;
+ - pc_be_in[1] + NET pc_be_in[1] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 225084 0 ) N ;
+ - pc_be_in[0] + NET pc_be_in[0] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 347292 0 ) N ;
+ - pc_be_out[3] + NET pc_be_out[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 200916 ) N ;
+ - pc_be_out[2] + NET pc_be_out[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 201828 ) N ;
+ - pc_be_out[1] + NET pc_be_out[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 201220 ) N ;
+ - pc_be_out[0] + NET pc_be_out[0] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 201524 ) N ;
+ - pc_be_en + NET pc_be_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 219156 ) N ;
+ - pframe_n_in + NET pframe_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255940 0 ) N ;
+ - pframe_n_out + NET pframe_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 218852 ) N ;
+ - pframe_n_en + NET pframe_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 218548 ) N ;
+ - ptrdy_n_in + NET ptrdy_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255788 0 ) N ;
+ - ptrdy_n_out + NET ptrdy_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 218244 ) N ;
+ - ptrdy_n_en + NET ptrdy_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 217940 ) N ;
+ - pirdy_n_in + NET pirdy_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 245604 0 ) N ;
+ - pirdy_n_out + NET pirdy_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 217636 ) N ;
+ - pirdy_n_en + NET pirdy_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 217332 ) N ;
+ - pdevsel_n_in + NET pdevsel_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 245756 0 ) N ;
+ - pdevsel_n_en + NET pdevsel_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 217028 ) N ;
+ - pstop_n_in + NET pstop_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255484 0 ) N ;
+ - pstop_n_out + NET pstop_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 216724 ) N ;
+ - pstop_n_en + NET pstop_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 216420 ) N ;
+ - pperr_n_in + NET pperr_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 245908 0 ) N ;
+ - pperr_n_out + NET pperr_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 216116 ) N ;
+ - pperr_n_en + NET pperr_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 215812 ) N ;
+ - pserr_n_in + NET pserr_n_in + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255332 0 ) N ;
+ - pserr_n_out + NET pserr_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 215508 ) N ;
+ - pserr_n_en + NET pserr_n_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 215204 ) N ;
+ - preq_n_ + NET preq_n_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 214900 ) N ;
+ - pack_n + NET pack_n + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 214596 ) N ;
+ - pm66en + NET pm66en + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246060 0 ) N ;
+ - cmd_2_ + NET cmd_2_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 214292 ) N ;
+ - cmd_1_ + NET cmd_1_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 213988 ) N ;
+ - cmd_0_ + NET cmd_0_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 213684 ) N ;
+ - cmd_in_valid + NET cmd_in_valid + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255180 0 ) N ;
+ - cmd_in[3] + NET cmd_in[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246212 0 ) N ;
+ - cmd_in[2] + NET cmd_in[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 255028 0 ) N ;
+ - cmd_in[1] + NET cmd_in[1] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246364 0 ) N ;
+ - cmd_in[0] + NET cmd_in[0] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 254876 0 ) N ;
+ - sys_rst_n + NET sys_rst_n + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 232228 0 ) N ;
+ - test_mode + NET test_mode + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246516 0 ) N ;
+ - rfifo_pop + NET rfifo_pop + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 254724 0 ) N ;
+ - rfifo_empty_BAR + NET VSS + SPECIAL + DIRECTION OUTPUT + USE TIEOFF
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 142548 ) N ;
+ - wfifo_push + NET wfifo_push + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 129476 ) N ;
+ - wfifo_full + NET wfifo_full + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 129172 ) N ;
+ - pci_read_data[31] + NET pci_read_data[31] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 397604 ) N ;
+ - pci_read_data[30] + NET pci_read_data[30] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 389092 ) N ;
+ - pci_read_data[29] + NET pci_read_data[29] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 355044 ) N ;
+ - pci_read_data[28] + NET pci_read_data[28] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 365380 ) N ;
+ - pci_read_data[27] + NET pci_read_data[27] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 347748 ) N ;
+ - pci_read_data[26] + NET pci_read_data[26] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 358084 ) N ;
+ - pci_read_data[25] + NET pci_read_data[25] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 412804 ) N ;
+ - pci_read_data[24] + NET pci_read_data[24] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 378148 ) N ;
+ - pci_read_data[23] + NET pci_read_data[23] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 103028 ) N ;
+ - pci_read_data[22] + NET pci_read_data[22] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 152884 ) N ;
+ - pci_read_data[21] + NET pci_read_data[21] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 172340 ) N ;
+ - pci_read_data[20] + NET pci_read_data[20] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 386052 ) N ;
+ - pci_read_data[19] + NET pci_read_data[19] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 375716 ) N ;
+ - pci_read_data[18] + NET pci_read_data[18] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 399428 ) N ;
+ - pci_read_data[17] + NET pci_read_data[17] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 389092 ) N ;
+ - pci_read_data[16] + NET pci_read_data[16] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 368420 ) N ;
+ - pci_read_data[15] + NET pci_read_data[15] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 327076 ) N ;
+ - pci_read_data[14] + NET pci_read_data[14] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 306404 ) N ;
+ - pci_read_data[13] + NET pci_read_data[13] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 285732 ) N ;
+ - pci_read_data[12] + NET pci_read_data[12] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 367204 ) N ;
+ - pci_read_data[11] + NET pci_read_data[11] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 323428 ) N ;
+ - pci_read_data[10] + NET pci_read_data[10] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 345316 ) N ;
+ - pci_read_data[9] + NET pci_read_data[9] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 275396 ) N ;
+ - pci_read_data[8] + NET pci_read_data[8] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 410980 ) N ;
+ - pci_read_data[7] + NET pci_read_data[7] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 337412 ) N ;
+ - pci_read_data[6] + NET pci_read_data[6] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 316740 ) N ;
+ - pci_read_data[5] + NET pci_read_data[5] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 407940 ) N ;
+ - pci_read_data[4] + NET pci_read_data[4] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 296068 ) N ;
+ - pci_read_data[3] + NET pci_read_data[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 334372 ) N ;
+ - pci_read_data[2] + NET pci_read_data[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 356260 ) N ;
+ - pci_read_data[1] + NET pci_read_data[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 400036 ) N ;
+ - pci_read_data[0] + NET pci_read_data[0] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 378756 ) N ;
+ - pci_write_data[31] + NET pci_write_data[31] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 98468 ) N ;
+ - pci_write_data[30] + NET pci_write_data[30] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 109412 ) N ;
+ - pci_write_data[29] + NET pci_write_data[29] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 131300 ) N ;
+ - pci_write_data[28] + NET pci_write_data[28] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 120356 ) N ;
+ - pci_write_data[27] + NET pci_write_data[27] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 82660 ) N ;
+ - pci_write_data[26] + NET pci_write_data[26] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 103332 ) N ;
+ - pci_write_data[25] + NET pci_write_data[25] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 76580 ) N ;
+ - pci_write_data[24] + NET pci_write_data[24] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 124004 ) N ;
+ - pci_write_data[23] + NET pci_write_data[23] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 92996 ) N ;
+ - pci_write_data[22] + NET pci_write_data[22] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 113668 ) N ;
+ - pci_write_data[21] + NET pci_write_data[21] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 87524 ) N ;
+ - pci_write_data[20] + NET pci_write_data[20] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 134340 ) N ;
+ - pci_write_data[19] + NET pci_write_data[19] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 54692 ) N ;
+ - pci_write_data[18] + NET pci_write_data[18] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 65636 ) N ;
+ - pci_write_data[17] + NET pci_write_data[17] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 72324 ) N ;
+ - pci_write_data[16] + NET pci_write_data[16] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 72020 ) N ;
+ - pci_write_data[15] + NET pci_write_data[15] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 10916 ) N ;
+ - pci_write_data[14] + NET pci_write_data[14] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 21860 ) N ;
+ - pci_write_data[13] + NET pci_write_data[13] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 43748 ) N ;
+ - pci_write_data[12] + NET pci_write_data[12] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 32804 ) N ;
+ - pci_write_data[11] + NET pci_write_data[11] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 51348 ) N ;
+ - pci_write_data[10] + NET pci_write_data[10] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 61684 ) N ;
+ - pci_write_data[9] + NET pci_write_data[9] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 20644 ) N ;
+ - pci_write_data[8] + NET pci_write_data[8] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 10308 ) N ;
+ - pci_write_data[7] + NET pci_write_data[7] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 30980 ) N ;
+ - pci_write_data[6] + NET pci_write_data[6] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 41316 ) N ;
+ - pci_write_data[5] + NET pci_write_data[5] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 61988 ) N ;
+ - pci_write_data[4] + NET pci_write_data[4] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 51652 ) N ;
+ - pci_write_data[3] + NET pci_write_data[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 10004 ) N ;
+ - pci_write_data[2] + NET pci_write_data[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 20340 ) N ;
+ - pci_write_data[1] + NET pci_write_data[1] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 41012 ) N ;
+ - pci_write_data[0] + NET pci_write_data[0] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 30676 ) N ;
+ - light_sleep + NET light_sleep + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246668 0 ) N ;
+ - deep_sleep + NET deep_sleep + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 254572 0 ) N ;
+ - shutdown + NET shutdown + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246820 0 ) N ;
+ - IN0 + NET IN0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 254420 0 ) N ;
+ - IN1 + NET IN1 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 118836 ) N ;
+ - test_si5 + NET test_si5 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 246972 0 ) N ;
+ - pclk_cts_7 + NET pclk_cts_7 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 10308 ) N ;
+ - pclk_cts_8 + NET pclk_cts_8 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 254268 0 ) N ;
+ - pclk_cts_9 + NET pclk_cts_9 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 92692 ) N ;
+ - test_si1 + NET test_si1 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 247124 0 ) N ;
+ - test_so6 + NET test_so6 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 213380 ) N ;
+ - test_so5 + NET test_so5 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 213076 ) N ;
+ - test_se + NET test_se + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 254116 0 ) N ;
+ - IN2 + NET IN2 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 247276 0 ) N ;
+ - IN3 + NET IN3 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253964 0 ) N ;
+ - test_se_hfs_netlink_162 + NET test_se_hfs_netlink_162 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 247428 0 ) N ;
+ - test_se_hfs_netlink_163 + NET test_se_hfs_netlink_163 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253812 0 ) N ;
+ - test_se_hfs_netlink_164 + NET test_se_hfs_netlink_164 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 247580 0 ) N ;
+ - test_se_hfs_netlink_165 + NET test_se_hfs_netlink_165 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253660 0 ) N ;
+ - test_se_hfs_netlink_166 + NET test_se_hfs_netlink_166 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 247732 0 ) N ;
+ - test_se_hfs_netlink_167 + NET test_se_hfs_netlink_167 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253508 0 ) N ;
+ - test_se_hfs_netlink_168 + NET test_se_hfs_netlink_168 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 247884 0 ) N ;
+ - test_se_hfs_netlink_169 + NET test_se_hfs_netlink_169 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253356 0 ) N ;
+ - test_se_hfs_netlink_170 + NET test_se_hfs_netlink_170 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248036 0 ) N ;
+ - test_se_hfs_netlink_171 + NET test_se_hfs_netlink_171 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253204 0 ) N ;
+ - test_se_hfs_netlink_172 + NET test_se_hfs_netlink_172 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248188 0 ) N ;
+ - test_se_hfs_netlink_173 + NET test_se_hfs_netlink_173 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253052 0 ) N ;
+ - test_se_hfs_netlink_174 + NET test_se_hfs_netlink_174 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248340 0 ) N ;
+ - test_se_hfs_netlink_175 + NET test_se_hfs_netlink_175 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252900 0 ) N ;
+ - test_se_hfs_netlink_176 + NET test_se_hfs_netlink_176 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248492 0 ) N ;
+ - IN4 + NET IN4 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252748 0 ) N ;
+ - IN5 + NET IN5 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248644 0 ) N ;
+ - IN6 + NET IN6 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252596 0 ) N ;
+ - IN7 + NET IN7 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248796 0 ) N ;
+ - IN8 + NET IN8 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252444 0 ) N ;
+ - IN9 + NET IN9 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 248948 0 ) N ;
+ - IN10 + NET IN10 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252292 0 ) N ;
+ - IN11 + NET IN11 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 249100 0 ) N ;
+ - IN12 + NET IN12 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 252140 0 ) N ;
+ - IN13 + NET IN13 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 249252 0 ) N ;
+ - IN14 + NET IN14 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251988 0 ) N ;
+ - IN15 + NET IN15 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 249404 0 ) N ;
+ - IN16 + NET IN16 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251836 0 ) N ;
+ - IN17 + NET IN17 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 249556 0 ) N ;
+ - IN18 + NET IN18 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251684 0 ) N ;
+ - IN19 + NET IN19 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 249708 0 ) N ;
+ - IN20 + NET IN20 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251532 0 ) N ;
+ - IN21 + NET IN21 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 249860 0 ) N ;
+ - IN22 + NET IN22 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251380 0 ) N ;
+ - IN23 + NET IN23 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250012 0 ) N ;
+ - IN24 + NET IN24 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251228 0 ) N ;
+ - IN25 + NET IN25 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250164 0 ) N ;
+ - IN26 + NET IN26 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 251076 0 ) N ;
+ - IN27 + NET IN27 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250316 0 ) N ;
+ - IN28 + NET IN28 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250924 0 ) N ;
+ - test_si8 + NET test_si8 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250468 0 ) N ;
+ - test_si7 + NET test_si7 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250772 0 ) N ;
+ - test_si6 + NET test_si6 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 250620 0 ) N ;
+ - test_so9 + NET test_so9 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 212772 ) N ;
+ - test_so8 + NET test_so8 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 212468 ) N ;
+ - pad_out_31__BAR + NET pad_out_31__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 237700 ) N ;
+ - pad_out_30__BAR + NET pad_out_30__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 229796 ) N ;
+ - pad_out_29__BAR + NET pad_out_29__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 196964 ) N ;
+ - pad_out_28__BAR + NET pad_out_28__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 60924 0 ) N ;
+ - pad_out_27__BAR + NET pad_out_27__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 206692 ) N ;
+ - pad_out_26__BAR + NET pad_out_26__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 262628 ) N ;
+ - pad_out_25__BAR + NET pad_out_25__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 175076 ) N ;
+ - pad_out_24__BAR + NET pad_out_24__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 218852 ) N ;
+ - pad_out_23__BAR + NET pad_out_23__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 273572 ) N ;
+ - pad_out_22__BAR + NET pad_out_22__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 50740 0 ) N ;
+ - pad_out_21__BAR + NET pad_out_21__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30372 0 ) N ;
+ - pad_out_20__BAR + NET pad_out_20__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 153188 ) N ;
+ - pad_out_19__BAR + NET pad_out_19__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 155012 ) N ;
+ - pad_out_18__BAR + NET pad_out_18__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 227364 ) N ;
+ - pad_out_17__BAR + NET pad_out_17__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 20188 0 ) N ;
+ - pad_out_16__BAR + NET pad_out_16__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 175684 ) N ;
+ - pad_out_15__BAR + NET pad_out_15__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 240740 ) N ;
+ - pad_out_14__BAR + NET pad_out_14__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 186020 ) N ;
+ - pad_out_13__BAR + NET pad_out_13__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 186020 ) N ;
+ - pad_out_12__BAR + NET pad_out_12__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 164132 ) N ;
+ - pad_out_11__BAR + NET pad_out_11__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 196356 ) N ;
+ - pad_out_10__BAR + NET pad_out_10__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 40556 0 ) N ;
+ - pad_out_9__BAR + NET pad_out_9__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 217028 ) N ;
+ - pad_out_8__BAR + NET pad_out_8__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 142244 ) N ;
+ - pad_out_7__BAR + NET pad_out_7__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 251684 ) N ;
+ - pad_out_6__BAR + NET pad_out_6__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30676 0 ) N ;
+ - pad_out_5__BAR + NET pad_out_5__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10004 0 ) N ;
+ - pad_out_4__BAR + NET pad_out_4__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10004 0 ) N ;
+ - pad_out_3__BAR + NET pad_out_3__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 144676 ) N ;
+ - pad_out_2__BAR + NET pad_out_2__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 20340 0 ) N ;
+ - pad_out_1__BAR + NET pad_out_1__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 207908 ) N ;
+ - pad_out_0__BAR + NET pad_out_0__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 165348 ) N ;
+ - pdevsel_n_out + NET pdevsel_n_out + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 212164 ) N ;
+ - cmd_valid + NET cmd_valid + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 211860 ) N ;
+ - cmd_3_ + NET cmd_3_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 211556 ) N ;
+ - sys_clk_BAR + NET sys_clk_BAR + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 20644 ) N ;
+ - VSS + NET VSS + SPECIAL + DIRECTION INPUT + USE GROUND ;
+ - VDD + NET VDD + SPECIAL + DIRECTION INPUT + USE POWER ;
+ - sys_clk_BAR__FEEDTHRU_1 + NET sys_clk_BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 86308 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[63] + NET net_sd_sys_read_data__FEEDTHRU_0[63] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 325860 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[63] + NET net_sd_sys_read_data__FEEDTHRU_0[63] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 73844 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[62] + NET net_sd_sys_read_data__FEEDTHRU_0[62] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 263844 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[62] + NET net_sd_sys_read_data__FEEDTHRU_0[62] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 94516 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[61] + NET net_sd_sys_read_data__FEEDTHRU_0[61] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 305188 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[61] + NET net_sd_sys_read_data__FEEDTHRU_0[61] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 231012 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[60] + NET net_sd_sys_read_data__FEEDTHRU_0[60] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 204716 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[60] + NET net_sd_sys_read_data__FEEDTHRU_0[60] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 148324 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[59] + NET net_sd_sys_read_data__FEEDTHRU_0[59] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 82508 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[59] + NET net_sd_sys_read_data__FEEDTHRU_0[59] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 104852 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[58] + NET net_sd_sys_read_data__FEEDTHRU_0[58] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 133428 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[58] + NET net_sd_sys_read_data__FEEDTHRU_0[58] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 106068 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[57] + NET net_sd_sys_read_data__FEEDTHRU_0[57] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 294852 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[57] + NET net_sd_sys_read_data__FEEDTHRU_0[57] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 156532 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[56] + NET net_sd_sys_read_data__FEEDTHRU_0[56] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 129476 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[56] + NET net_sd_sys_read_data__FEEDTHRU_0[56] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 177204 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[55] + NET net_sd_sys_read_data__FEEDTHRU_0[55] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 336196 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[55] + NET net_sd_sys_read_data__FEEDTHRU_0[55] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 114884 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[54] + NET net_sd_sys_read_data__FEEDTHRU_0[54] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 253508 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[54] + NET net_sd_sys_read_data__FEEDTHRU_0[54] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 63204 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[53] + NET net_sd_sys_read_data__FEEDTHRU_0[53] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 284516 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[53] + NET net_sd_sys_read_data__FEEDTHRU_0[53] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 290596 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[52] + NET net_sd_sys_read_data__FEEDTHRU_0[52] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 139812 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[52] + NET net_sd_sys_read_data__FEEDTHRU_0[52] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 200004 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[51] + NET net_sd_sys_read_data__FEEDTHRU_0[51] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 163980 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[51] + NET net_sd_sys_read_data__FEEDTHRU_0[51] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 135556 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[50] + NET net_sd_sys_read_data__FEEDTHRU_0[50] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 92692 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[50] + NET net_sd_sys_read_data__FEEDTHRU_0[50] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 75516 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[49] + NET net_sd_sys_read_data__FEEDTHRU_0[49] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 153796 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[49] + NET net_sd_sys_read_data__FEEDTHRU_0[49] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 176900 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[48] + NET net_sd_sys_read_data__FEEDTHRU_0[48] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 123244 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[48] + NET net_sd_sys_read_data__FEEDTHRU_0[48] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 177356 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[47] + NET net_sd_sys_read_data__FEEDTHRU_0[47] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 274180 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[47] + NET net_sd_sys_read_data__FEEDTHRU_0[47] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 324036 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[46] + NET net_sd_sys_read_data__FEEDTHRU_0[46] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 346532 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[46] + NET net_sd_sys_read_data__FEEDTHRU_0[46] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 282692 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[45] + NET net_sd_sys_read_data__FEEDTHRU_0[45] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 367204 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[45] + NET net_sd_sys_read_data__FEEDTHRU_0[45] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 251684 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[44] + NET net_sd_sys_read_data__FEEDTHRU_0[44] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 129476 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[44] + NET net_sd_sys_read_data__FEEDTHRU_0[44] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 137988 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[43] + NET net_sd_sys_read_data__FEEDTHRU_0[43] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 243172 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[43] + NET net_sd_sys_read_data__FEEDTHRU_0[43] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 95884 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[42] + NET net_sd_sys_read_data__FEEDTHRU_0[42] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 102876 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[42] + NET net_sd_sys_read_data__FEEDTHRU_0[42] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 85700 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[41] + NET net_sd_sys_read_data__FEEDTHRU_0[41] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 143612 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[41] + NET net_sd_sys_read_data__FEEDTHRU_0[41] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 135860 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[40] + NET net_sd_sys_read_data__FEEDTHRU_0[40] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 113060 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[40] + NET net_sd_sys_read_data__FEEDTHRU_0[40] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 166868 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[39] + NET net_sd_sys_read_data__FEEDTHRU_0[39] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 194532 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[39] + NET net_sd_sys_read_data__FEEDTHRU_0[39] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 52868 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[38] + NET net_sd_sys_read_data__FEEDTHRU_0[38] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 356868 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[38] + NET net_sd_sys_read_data__FEEDTHRU_0[38] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 312484 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[37] + NET net_sd_sys_read_data__FEEDTHRU_0[37] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 377540 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[37] + NET net_sd_sys_read_data__FEEDTHRU_0[37] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 189668 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[36] + NET net_sd_sys_read_data__FEEDTHRU_0[36] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 184348 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[36] + NET net_sd_sys_read_data__FEEDTHRU_0[36] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 127652 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[35] + NET net_sd_sys_read_data__FEEDTHRU_0[35] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 72324 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[35] + NET net_sd_sys_read_data__FEEDTHRU_0[35] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 94212 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[34] + NET net_sd_sys_read_data__FEEDTHRU_0[34] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 242564 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[34] + NET net_sd_sys_read_data__FEEDTHRU_0[34] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 63508 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[33] + NET net_sd_sys_read_data__FEEDTHRU_0[33] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 315524 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[33] + NET net_sd_sys_read_data__FEEDTHRU_0[33] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 156228 422730 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_0[32] + NET net_sd_sys_read_data__FEEDTHRU_0[32] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 174164 0 ) N ;
+ - net_sd_sys_read_data__FEEDTHRU_1[32] + NET net_sd_sys_read_data__FEEDTHRU_0[32] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 146804 422730 ) N ;
+ - n450__FEEDTHRU_0 + NET n450__FEEDTHRU_0 + DIRECTION INOUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 10308 ) N ;
+ - n450__FEEDTHRU_1 + NET n450__FEEDTHRU_0 + DIRECTION INOUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 119140 0 ) N ;
+ - net_blender_op__FEEDTHRU_0[2] + NET net_blender_op__FEEDTHRU_0[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 30980 ) N ;
+ - net_blender_op__FEEDTHRU_1[2] + NET net_blender_op__FEEDTHRU_0[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 106980 ) N ;
+ - n536__FEEDTHRU_0 + NET n536__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 41316 ) N ;
+ - n536__FEEDTHRU_1 + NET n536__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 117316 ) N ;
+ - n445__FEEDTHRU_0 + NET n445__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 406116 ) N ;
+ - n445__FEEDTHRU_1 + NET n445__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 53172 422730 ) N ;
+ - n443__FEEDTHRU_0 + NET n443__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 51652 0 ) N ;
+ - n443__FEEDTHRU_1 + NET n443__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 301540 ) N ;
+ - n1219__FEEDTHRU_0 + NET n1219__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 20644 0 ) N ;
+ - n1219__FEEDTHRU_1 + NET n1219__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 241348 ) N ;
+ - n1211__FEEDTHRU_0 + NET n1211__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 406420 ) N ;
+ - n1211__FEEDTHRU_1 + NET n1211__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 168996 ) N ;
+ - n437__FEEDTHRU_0 + NET n437__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 92692 0 ) N ;
+ - n437__FEEDTHRU_1 + NET n437__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 116252 422730 ) N ;
+ - n1213__FEEDTHRU_0 + NET n1213__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 92996 0 ) N ;
+ - n1213__FEEDTHRU_1 + NET n1213__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 115188 422730 ) N ;
+ - n1217__FEEDTHRU_0 + NET n1217__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 103332 0 ) N ;
+ - n1217__FEEDTHRU_1 + NET n1217__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 187236 422730 ) N ;
+ - n429__FEEDTHRU_0 + NET n429__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 405508 ) N ;
+ - n429__FEEDTHRU_1 + NET n429__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 187540 422730 ) N ;
+ - n1224__FEEDTHRU_0 + NET n1224__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 82356 0 ) N ;
+ - n1224__FEEDTHRU_1 + NET n1224__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 83876 422730 ) N ;
+ - n459__FEEDTHRU_0 + NET n459__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 72324 0 ) N ;
+ - n459__FEEDTHRU_1 + NET n459__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 293028 ) N ;
+ - n457__FEEDTHRU_0 + NET n457__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 82660 0 ) N ;
+ - n457__FEEDTHRU_1 + NET n457__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 272356 ) N ;
+ - n447__FEEDTHRU_0 + NET n447__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 61684 0 ) N ;
+ - n447__FEEDTHRU_1 + NET n447__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 210340 ) N ;
+ - n1226__FEEDTHRU_0 + NET n1226__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 41316 0 ) N ;
+ - n1226__FEEDTHRU_1 + NET n1226__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 126436 422730 ) N ;
+ - n1228__FEEDTHRU_0 + NET n1228__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 51348 0 ) N ;
+ - n1228__FEEDTHRU_1 + NET n1228__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 125524 422730 ) N ;
+ - n455__FEEDTHRU_0 + NET n455__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 103028 0 ) N ;
+ - n455__FEEDTHRU_1 + NET n455__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 145892 422730 ) N ;
+ - n453__FEEDTHRU_0 + NET n453__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10308 0 ) N ;
+ - n453__FEEDTHRU_1 + NET n453__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 136620 422730 ) N ;
+ - n427__FEEDTHRU_0 + NET n427__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 406724 ) N ;
+ - n427__FEEDTHRU_1 + NET n427__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 344708 ) N ;
+ - n425__FEEDTHRU_0 + NET n425__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 407028 ) N ;
+ - n425__FEEDTHRU_1 + NET n425__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 303364 ) N ;
+ - n1221__FEEDTHRU_0 + NET n1221__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 406116 ) N ;
+ - n1221__FEEDTHRU_1 + NET n1221__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 262020 ) N ;
+ - n421__FEEDTHRU_0 + NET n421__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 41012 0 ) N ;
+ - n421__FEEDTHRU_1 + NET n421__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 179332 ) N ;
+ - n1215__FEEDTHRU_0 + NET n1215__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 405812 ) N ;
+ - n1215__FEEDTHRU_1 + NET n1215__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 73540 422730 ) N ;
+ - n417__FEEDTHRU_0 + NET n417__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 61988 0 ) N ;
+ - n417__FEEDTHRU_1 + NET n417__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 125220 422730 ) N ;
+ - n431__FEEDTHRU_0 + NET n431__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30980 0 ) N ;
+ - n431__FEEDTHRU_1 + NET n431__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 146196 422730 ) N ;
+ - n415__FEEDTHRU_0 + NET n415__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 72020 0 ) N ;
+ - n415__FEEDTHRU_1 + NET n415__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 167172 422730 ) N ;
+ - n2145__FEEDTHRU_0 + NET n2145__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 51652 ) N ;
+ - n2145__FEEDTHRU_1 + NET n2145__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 313700 ) N ;
+ - net_pci_context_data__FEEDTHRU_0[6] + NET net_pci_context_data__FEEDTHRU_0[6] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 61988 ) N ;
+ - net_pci_context_data__FEEDTHRU_1[6] + NET net_pci_context_data__FEEDTHRU_0[6] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 334372 ) N ;
+ - net_pci_context_data__FEEDTHRU_0[5] + NET net_pci_context_data__FEEDTHRU_0[5] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 150148 ) N ;
+ - net_pci_context_data__FEEDTHRU_1[5] + NET net_pci_context_data__FEEDTHRU_0[5] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 220676 ) N ;
+ - n2151__FEEDTHRU_0 + NET n2151__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 72324 ) N ;
+ - n2151__FEEDTHRU_1 + NET n2151__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 158660 ) N ;
+ - n2140__FEEDTHRU_0 + NET n2140__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 82660 ) N ;
+ - n2140__FEEDTHRU_1 + NET n2140__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 104548 422730 ) N ;
+ - net_pci_context_data_2__FEEDTHRU_0 + NET net_pci_context_data_2__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 10004 ) N ;
+ - net_pci_context_data_2__FEEDTHRU_1 + NET net_pci_context_data_2__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 84180 422730 ) N ;
+ - net_pci_context_data_1__FEEDTHRU_0 + NET net_pci_context_data_1__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 92996 ) N ;
+ - net_pci_context_data_1__FEEDTHRU_1 + NET net_pci_context_data_1__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 166564 422730 ) N ;
+ - n2157__FEEDTHRU_0 + NET n2157__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 20340 ) N ;
+ - n2157__FEEDTHRU_1 + NET n2157__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 156988 422730 ) N ;
+ - n452__FEEDTHRU_0 + NET n452__FEEDTHRU_0 + DIRECTION INOUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 119140 0 ) N ;
+ - n452__FEEDTHRU_1 + NET n452__FEEDTHRU_0 + DIRECTION INOUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 172644 ) N ;
+ - n1106__FEEDTHRU_0 + NET n1106__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 139812 0 ) N ;
+ - n1108__FEEDTHRU_0 + NET n1108__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 181156 0 ) N ;
+ - n1108__FEEDTHRU_1 + NET n1108__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30676 422730 ) N ;
+ - n1110__FEEDTHRU_0 + NET n1110__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 181156 0 ) N ;
+ - n1114__FEEDTHRU_0 + NET n1114__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 160484 0 ) N ;
+ - n1116__FEEDTHRU_0 + NET n1116__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 201828 0 ) N ;
+ - n1116__FEEDTHRU_1 + NET n1116__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30372 422730 ) N ;
+ - n1118__FEEDTHRU_0 + NET n1118__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 160484 0 ) N ;
+ - n1118__FEEDTHRU_1 + NET n1118__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 20188 422730 ) N ;
+ - n1124__FEEDTHRU_0 + NET n1124__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 212164 0 ) N ;
+ - n1126__FEEDTHRU_0 + NET n1126__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 191492 0 ) N ;
+ - n1133__FEEDTHRU_0 + NET n1133__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 150148 0 ) N ;
+ - n1135__FEEDTHRU_0 + NET n1135__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 232836 0 ) N ;
+ - n1137__FEEDTHRU_0 + NET n1137__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 212164 0 ) N ;
+ - n1139__FEEDTHRU_0 + NET n1139__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 222500 0 ) N ;
+ - n1141__FEEDTHRU_0 + NET n1141__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 170820 0 ) N ;
+ - n1162__FEEDTHRU_0 + NET n1162__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 170820 0 ) N ;
+ - n1162__FEEDTHRU_1 + NET n1162__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 20340 422730 ) N ;
+ - n1164__FEEDTHRU_0 + NET n1164__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 191492 0 ) N ;
+ - n1164__FEEDTHRU_1 + NET n1164__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10004 422730 ) N ;
+ - n1166__FEEDTHRU_0 + NET n1166__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 150148 0 ) N ;
+ - n1166__FEEDTHRU_1 + NET n1166__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 20644 422730 ) N ;
+ - net_blender_op__FEEDTHRU_0[3] + NET net_blender_op__FEEDTHRU_0[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 160484 ) N ;
+ - net_blender_op__FEEDTHRU_1[3] + NET net_blender_op__FEEDTHRU_0[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 96644 ) N ;
+ - n1112__FEEDTHRU_0 + NET n1112__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 201828 0 ) N ;
+ - n1145__FEEDTHRU_0 + NET n1145__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 254724 ) N ;
+ - n1145__FEEDTHRU_1 + NET n1145__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 187540 422730 ) N ;
+ - n1194__FEEDTHRU_0 + NET n1194__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 82356 ) N ;
+ - n1194__FEEDTHRU_1 + NET n1194__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 265060 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[7] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[7] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 30676 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[7] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[7] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 60924 422730 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[6] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[6] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 103332 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[6] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[6] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 41012 422730 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[5] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[5] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 41012 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[5] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[5] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30980 422730 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[4] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[4] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 51348 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[4] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[4] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10308 422730 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[3] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 61684 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[3] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 41316 422730 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[2] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 113668 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[2] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 40556 422730 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_0[1] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[1] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 172644 ) N ;
+ - net_parser_risc_Instrn_lo__FEEDTHRU_1[1] + NET net_parser_risc_Instrn_lo__FEEDTHRU_0[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 50740 422730 ) N ;
+ - n1210__FEEDTHRU_0 + NET n1210__FEEDTHRU_0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 407984 72020 ) N ;
+ - n1210__FEEDTHRU_1 + NET n1210__FEEDTHRU_0 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10004 422730 ) N ;
+END PINS
+PINPROPERTIES 428 ;
+ - PIN pclk
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_rst_n
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN pidsel
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pgnt_n
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[31]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[30]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[29]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[28]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[27]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[26]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[25]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[24]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[23]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[22]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[21]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[20]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[19]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[18]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[17]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[16]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[15]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[14]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[13]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[12]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[11]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[10]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[9]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[8]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[7]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[6]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[5]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[4]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[3]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[2]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[1]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_in[0]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN ppar_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN ppar_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN ppar_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pc_be_in[3]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pc_be_in[2]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pc_be_in[1]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pc_be_in[0]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pc_be_out[3]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pc_be_out[2]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pc_be_out[1]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pc_be_out[0]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pc_be_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pframe_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pframe_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pframe_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN ptrdy_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN ptrdy_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN ptrdy_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pirdy_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pirdy_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pirdy_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pdevsel_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pdevsel_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pstop_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pstop_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pstop_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pperr_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pperr_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pperr_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pserr_n_in
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pserr_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pserr_n_en
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN preq_n_
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pack_n
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pm66en
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN cmd_2_
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN cmd_1_
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN cmd_0_
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN cmd_in_valid
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN cmd_in[3]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN cmd_in[2]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN cmd_in[1]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN cmd_in[0]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN sys_rst_n
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_mode
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN rfifo_pop
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN rfifo_empty_BAR
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN wfifo_push
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN wfifo_full
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN pci_read_data[31]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[30]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[29]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[28]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[27]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[26]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[25]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[24]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[23]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN pci_read_data[22]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN pci_read_data[21]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN pci_read_data[20]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[19]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[18]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[17]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[16]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[15]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[14]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[13]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[12]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[11]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[10]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[9]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[8]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[7]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[6]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[5]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[4]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[3]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[2]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[1]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_read_data[0]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[31]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[30]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[29]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[28]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[27]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[26]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[25]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[24]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[23]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[22]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[21]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[20]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[19]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[18]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[17]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[16]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[15]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[14]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[13]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[12]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[11]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[10]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[9]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[8]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[7]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[6]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[5]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[4]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[3]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[2]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[1]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pci_write_data[0]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN light_sleep
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN deep_sleep
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN shutdown
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN1
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN test_si5
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pclk_cts_7
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pclk_cts_8
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pclk_cts_9
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN test_si1
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_so6
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN test_so5
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN test_se
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN2
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN3
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_162
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_163
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_164
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_165
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_166
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_167
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_168
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_169
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_170
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_171
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_172
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_173
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_174
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_175
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_se_hfs_netlink_176
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN4
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN5
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN6
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN7
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN8
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN9
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN10
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN11
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN12
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN13
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN14
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN15
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN16
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN17
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN18
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN19
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN20
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN21
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN22
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN23
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN24
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN25
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN26
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN27
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN IN28
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_si8
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_si7
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_si6
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN test_so9
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN test_so8
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_31__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_30__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_29__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_28__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_27__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_26__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_25__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_24__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_23__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_22__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_21__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_20__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_19__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_18__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_17__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_16__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_15__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_14__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_13__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_12__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_11__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_10__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_9__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_8__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_7__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_6__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_5__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_4__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_3__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_2__BAR
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN pad_out_1__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pad_out_0__BAR
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN pdevsel_n_out
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN cmd_valid
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN cmd_3_
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN sys_clk_BAR
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN sys_clk_BAR__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[63]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[63]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[62]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[62]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[61]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[61]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[60]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[60]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[59]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[59]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[58]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[58]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[57]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[57]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[56]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[56]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[55]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[55]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[54]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[54]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[53]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[53]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[52]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[52]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[51]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[51]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[50]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[50]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[49]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[49]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[48]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[48]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[47]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[47]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[46]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[46]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[45]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[45]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[44]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[44]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[43]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[43]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[42]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[42]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[41]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[41]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[40]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[40]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[39]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[39]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[38]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[38]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[37]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[37]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[36]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[36]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[35]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[35]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[34]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[34]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[33]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[33]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_0[32]
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_sd_sys_read_data__FEEDTHRU_1[32]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n450__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n450__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN net_blender_op__FEEDTHRU_0[2]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_blender_op__FEEDTHRU_1[2]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n536__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n536__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n445__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n445__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n443__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n443__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1219__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1219__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1211__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1211__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n437__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n437__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1213__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1213__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1217__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1217__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n429__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n429__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1224__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1224__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n459__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n459__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n457__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n457__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n447__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n447__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1226__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1226__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1228__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1228__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n455__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n455__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n453__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n453__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n427__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n427__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n425__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n425__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1221__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1221__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n421__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n421__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1215__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1215__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n417__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n417__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n431__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n431__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n415__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n415__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n2145__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n2145__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_pci_context_data__FEEDTHRU_0[6]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_pci_context_data__FEEDTHRU_1[6]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_pci_context_data__FEEDTHRU_0[5]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_pci_context_data__FEEDTHRU_1[5]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n2151__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n2151__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n2140__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n2140__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_pci_context_data_2__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_pci_context_data_2__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_pci_context_data_1__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_pci_context_data_1__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n2157__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n2157__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n452__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n452__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n1106__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1108__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1108__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1110__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1114__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1116__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1116__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1118__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1118__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1124__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1126__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1133__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1135__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1137__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1139__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1141__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1162__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1162__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1164__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1164__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1166__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1166__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_blender_op__FEEDTHRU_0[3]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_blender_op__FEEDTHRU_1[3]
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1112__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 bottom" ;
+ - PIN n1145__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN n1145__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1194__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n1194__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[7]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[7]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[6]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[6]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[5]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[5]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[4]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[4]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[3]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[3]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[2]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[2]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_0[1]
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN net_parser_risc_Instrn_lo__FEEDTHRU_1[1]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN n1210__FEEDTHRU_0
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN n1210__FEEDTHRU_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+END PINPROPERTIES
+END DESIGN

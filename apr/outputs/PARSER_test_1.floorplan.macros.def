@@ -1,0 +1,673 @@
+# 
+# IC Compiler II write_def
+# Release      : Q-2019.12-SP4
+# User Name    : sdurga2
+# Date         : Mon Aug 10 16:18:37 2020
+# 
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN PARSER ;
+UNITS DISTANCE MICRONS 1000 ;
+PROPERTYDEFINITIONS
+COMPONENTPIN ACCESS_DIRECTION STRING ;
+END PROPERTYDEFINITIONS
+DIEAREA ( 0 0 ) ( 0 17987 ) ( 56275 17987 ) ( 56275 0 ) ;
+COMPONENTMASKSHIFT MRDL VIARDL M9 VIA8 M8 VIA7 M7 VIA6 M6 VIA5 M5 VIA4 M4 VIA3 M3 VIA2 M2 VIA1 M1 CO PO NWELL ;
+PINS 132 ;
+ - sys_clk + NET sys_clk + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 43446 17701 ) N ;
+ - pclk + NET pclk + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10310 17701 ) N ;
+ - sys_rst_n + NET sys_rst_n + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44054 17701 ) N ;
+ - pcmd_3__BAR + NET pcmd_3__BAR + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16998 17701 ) N ;
+ - pcmd_2_ + NET pcmd_2_ + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16846 17701 ) N ;
+ - pcmd_1_ + NET pcmd_1_ + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16694 17701 ) N ;
+ - pcmd_0_ + NET pcmd_0_ + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16542 17701 ) N ;
+ - pcmd_out[3] + NET pcmd_out[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13958 17701 ) N ;
+ - pcmd_out[2] + NET pcmd_out[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13654 17701 ) N ;
+ - pcmd_out[1] + NET pcmd_out[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13350 17701 ) N ;
+ - pcmd_out[0] + NET pcmd_out[0] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13046 17701 ) N ;
+ - pcmd_out_valid + NET pcmd_out_valid + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30222 17701 ) N ;
+ - blender_op[3] + NET blender_op[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44662 17701 ) N ;
+ - blender_op[2] + NET blender_op[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44054 17701 ) N ;
+ - blender_op[1] + NET blender_op[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44206 17701 ) N ;
+ - blender_op[0] + NET blender_op[0] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44358 17701 ) N ;
+ - blender_clk_en + NET blender_clk_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 30070 17701 ) N ;
+ - context_en + NET context_en + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14870 17701 ) N ;
+ - context_cmd[7] + NET context_cmd[7] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15630 17701 ) N ;
+ - context_cmd[6] + NET context_cmd[6] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45878 17701 ) N ;
+ - context_cmd[5] + NET context_cmd[5] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12742 17701 ) N ;
+ - context_cmd[4] + NET context_cmd[4] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 35542 17701 ) N ;
+ - context_cmd[3] + NET context_cmd[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 35846 17701 ) N ;
+ - context_cmd[2] + NET context_cmd[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12438 17701 ) N ;
+ - context_cmd[1] + NET context_cmd[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 25510 17701 ) N ;
+ - context_cmd[0] + NET context_cmd[0] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 25206 17701 ) N ;
+ - fifo_read_pop + NET fifo_read_pop + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29918 17701 ) N ;
+ - fifo_read_empty + NET fifo_read_empty + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 9842 ) N ;
+ - fifo_write_push + NET fifo_write_push + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44662 17701 ) N ;
+ - fifo_write_full + NET fifo_write_full + DIRECTION INPUT + USE SIGNAL
+   + LAYER M3 ( 0 0 ) ( 286 56 )
+   + FIXED ( 55989 8018 ) N ;
+ - risc_Instrn_lo[7] + NET risc_Instrn_lo[7] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45878 17701 ) N ;
+ - risc_Instrn_lo[6] + NET risc_Instrn_lo[6] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 46182 17701 ) N ;
+ - risc_Instrn_lo[5] + NET risc_Instrn_lo[5] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44966 17701 ) N ;
+ - risc_Instrn_lo[4] + NET risc_Instrn_lo[4] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45270 17701 ) N ;
+ - risc_Instrn_lo[3] + NET risc_Instrn_lo[3] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 46182 17701 ) N ;
+ - risc_Instrn_lo[2] + NET risc_Instrn_lo[2] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 25814 17701 ) N ;
+ - risc_Instrn_lo[1] + NET risc_Instrn_lo[1] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 35998 17701 ) N ;
+ - risc_Instrn_lo[0] + NET risc_Instrn_lo[0] + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45574 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[15] + NET risc_Xecutng_Instrn_lo[15] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 18214 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[14] + NET risc_Xecutng_Instrn_lo[14] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 18366 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[13] + NET risc_Xecutng_Instrn_lo[13] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 18062 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[12] + NET risc_Xecutng_Instrn_lo[12] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 17758 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[11] + NET risc_Xecutng_Instrn_lo[11] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 17606 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[10] + NET risc_Xecutng_Instrn_lo[10] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 17454 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[9] + NET risc_Xecutng_Instrn_lo[9] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 17150 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[8] + NET risc_Xecutng_Instrn_lo[8] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 17302 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[7] + NET risc_Xecutng_Instrn_lo[7] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 17910 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[6] + NET risc_Xecutng_Instrn_lo[6] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 18518 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[5] + NET risc_Xecutng_Instrn_lo[5] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10006 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[4] + NET risc_Xecutng_Instrn_lo[4] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 18670 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[3] + NET risc_Xecutng_Instrn_lo[3] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10310 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[2] + NET risc_Xecutng_Instrn_lo[2] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10918 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[1] + NET risc_Xecutng_Instrn_lo[1] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11222 17701 ) N ;
+ - risc_Xecutng_Instrn_lo[0] + NET risc_Xecutng_Instrn_lo[0] + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10614 17701 ) N ;
+ - pci_w_mux_select_2__BAR + NET pci_w_mux_select_2__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11830 17701 ) N ;
+ - pci_w_mux_select_1_ + NET pci_w_mux_select_1_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12134 17701 ) N ;
+ - pci_w_mux_select_0_ + NET pci_w_mux_select_0_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11526 17701 ) N ;
+ - sd_w_mux_select_1__BAR + NET sd_w_mux_select_1__BAR + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10158 17701 ) N ;
+ - sd_w_mux_select_0_ + NET sd_w_mux_select_0_ + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10006 17701 ) N ;
+ - parser_sd_rfifo_pop + NET parser_sd_rfifo_pop + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15174 17701 ) N ;
+ - sd_rfifo_parser_empty + NET sd_rfifo_parser_empty + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 9842 ) N ;
+ - parser_sd_wfifo_push + NET parser_sd_wfifo_push + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45270 17701 ) N ;
+ - sd_wfifo_parser_full + NET sd_wfifo_parser_full + DIRECTION INPUT + USE SIGNAL
+   + LAYER M5 ( 0 0 ) ( 286 56 )
+   + FIXED ( 55989 8018 ) N ;
+ - IN0 + NET IN0 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16390 17701 ) N ;
+ - IN1 + NET IN1 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16238 17701 ) N ;
+ - IN2 + NET IN2 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44814 17701 ) N ;
+ - IN3 + NET IN3 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 16086 17701 ) N ;
+ - IN4 + NET IN4 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44966 17701 ) N ;
+ - IN5 + NET IN5 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15934 17701 ) N ;
+ - sys_clk_cts_7 + NET sys_clk_cts_7 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 43598 17701 ) N ;
+ - sys_clk_cts_8 + NET sys_clk_cts_8 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15782 17701 ) N ;
+ - sys_clk_cts_9 + NET sys_clk_cts_9 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 43750 17701 ) N ;
+ - sys_clk_cts_0_1 + NET sys_clk_cts_0_1 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 43902 17701 ) N ;
+ - test_so8 + NET test_so8 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29766 17701 ) N ;
+ - test_so7 + NET test_so7 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29614 17701 ) N ;
+ - test_so6 + NET test_so6 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29462 17701 ) N ;
+ - test_so5 + NET test_so5 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44662 17701 ) N ;
+ - test_so4 + NET test_so4 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44054 17701 ) N ;
+ - test_so3 + NET test_so3 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29310 17701 ) N ;
+ - test_so2 + NET test_so2 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29158 17701 ) N ;
+ - test_so1 + NET test_so1 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 29006 17701 ) N ;
+ - test_se + NET test_se + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15478 17701 ) N ;
+ - IN6 + NET IN6 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44510 17701 ) N ;
+ - IN7 + NET IN7 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15326 17701 ) N ;
+ - IN8 + NET IN8 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M7 ( 0 0 ) ( 286 56 )
+   + FIXED ( 0 9842 ) N ;
+ - test_se_hfs_netlink_151 + NET test_se_hfs_netlink_151 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15174 17701 ) N ;
+ - test_se_hfs_netlink_152 + NET test_se_hfs_netlink_152 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 15022 17701 ) N ;
+ - test_se_hfs_netlink_153 + NET test_se_hfs_netlink_153 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14870 17701 ) N ;
+ - test_se_hfs_netlink_154 + NET test_se_hfs_netlink_154 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14718 17701 ) N ;
+ - test_se_hfs_netlink_155 + NET test_se_hfs_netlink_155 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14566 17701 ) N ;
+ - test_se_hfs_netlink_156 + NET test_se_hfs_netlink_156 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14414 17701 ) N ;
+ - test_se_hfs_netlink_157 + NET test_se_hfs_netlink_157 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14262 17701 ) N ;
+ - test_se_hfs_netlink_158 + NET test_se_hfs_netlink_158 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 14110 17701 ) N ;
+ - test_se_hfs_netlink_159 + NET test_se_hfs_netlink_159 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13958 17701 ) N ;
+ - test_se_hfs_netlink_160 + NET test_se_hfs_netlink_160 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13806 17701 ) N ;
+ - test_se_hfs_netlink_161 + NET test_se_hfs_netlink_161 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13654 17701 ) N ;
+ - IN9 + NET IN9 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 44358 17701 ) N ;
+ - IN10 + NET IN10 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13502 17701 ) N ;
+ - IN11 + NET IN11 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13350 17701 ) N ;
+ - IN12 + NET IN12 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45726 17701 ) N ;
+ - IN13 + NET IN13 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13198 17701 ) N ;
+ - IN14 + NET IN14 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 13046 17701 ) N ;
+ - IN15 + NET IN15 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45574 17701 ) N ;
+ - IN16 + NET IN16 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12894 17701 ) N ;
+ - IN17 + NET IN17 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12742 17701 ) N ;
+ - IN18 + NET IN18 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45422 17701 ) N ;
+ - IN19 + NET IN19 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M6 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45270 17701 ) N ;
+ - IN20 + NET IN20 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12590 17701 ) N ;
+ - IN21 + NET IN21 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M4 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45878 17701 ) N ;
+ - IN22 + NET IN22 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12438 17701 ) N ;
+ - IN23 + NET IN23 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 45118 17701 ) N ;
+ - IN24 + NET IN24 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 46030 17701 ) N ;
+ - test_si25 + NET test_si25 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12286 17701 ) N ;
+ - test_si24 + NET test_si24 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 12134 17701 ) N ;
+ - test_si23 + NET test_si23 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11982 17701 ) N ;
+ - test_si22 + NET test_si22 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11830 17701 ) N ;
+ - test_si21 + NET test_si21 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11678 17701 ) N ;
+ - test_si20 + NET test_si20 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11526 17701 ) N ;
+ - test_si19 + NET test_si19 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11374 17701 ) N ;
+ - test_si18 + NET test_si18 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11222 17701 ) N ;
+ - test_si17 + NET test_si17 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 11070 17701 ) N ;
+ - test_si16 + NET test_si16 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10918 17701 ) N ;
+ - test_si15 + NET test_si15 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10766 17701 ) N ;
+ - test_si14 + NET test_si14 + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10614 17701 ) N ;
+ - test_so13 + NET test_so13 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 28854 17701 ) N ;
+ - test_so12 + NET test_so12 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 28702 17701 ) N ;
+ - test_so11 + NET test_so11 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 28550 17701 ) N ;
+ - test_so10 + NET test_so10 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 28398 17701 ) N ;
+ - test_so9 + NET test_so9 + DIRECTION OUTPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 28246 17701 ) N ;
+ - pcmd_valid + NET pcmd_valid + DIRECTION INPUT + USE SIGNAL
+   + LAYER M2 ( 0 0 ) ( 56 286 )
+   + FIXED ( 10462 17701 ) N ;
+ - VSS + NET VSS + SPECIAL + DIRECTION INPUT + USE GROUND ;
+ - VDD + NET VDD + SPECIAL + DIRECTION INPUT + USE POWER ;
+END PINS
+PINPROPERTIES 130 ;
+ - PIN sys_clk
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pclk
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sys_rst_n
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_3__BAR
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_2_
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_1_
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_0_
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_out[3]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_out[2]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_out[1]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_out[0]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_out_valid
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN blender_op[3]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN blender_op[2]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN blender_op[1]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN blender_op[0]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN blender_clk_en
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_en
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[7]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[6]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[5]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[4]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[3]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[2]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[1]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN context_cmd[0]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN fifo_read_pop
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN fifo_read_empty
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN fifo_write_push
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN fifo_write_full
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN risc_Instrn_lo[7]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[6]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[5]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[4]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[3]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[2]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[1]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Instrn_lo[0]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[15]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[14]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[13]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[12]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[11]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[10]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[9]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[8]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[7]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[6]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[5]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[4]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[3]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[2]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[1]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN risc_Xecutng_Instrn_lo[0]
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pci_w_mux_select_2__BAR
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pci_w_mux_select_1_
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pci_w_mux_select_0_
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sd_w_mux_select_1__BAR
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sd_w_mux_select_0_
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN parser_sd_rfifo_pop
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sd_rfifo_parser_empty
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN parser_sd_wfifo_push
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sd_wfifo_parser_full
+   + PROPERTY ACCESS_DIRECTION "0 right" ;
+ - PIN IN0
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN2
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN3
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN4
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN5
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sys_clk_cts_7
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sys_clk_cts_8
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sys_clk_cts_9
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN sys_clk_cts_0_1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so8
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so7
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so6
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so5
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so4
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so3
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so2
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so1
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN6
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN7
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN8
+   + PROPERTY ACCESS_DIRECTION "0 left" ;
+ - PIN test_se_hfs_netlink_151
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_152
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_153
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_154
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_155
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_156
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_157
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_158
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_159
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_160
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_se_hfs_netlink_161
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN9
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN10
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN11
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN12
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN13
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN14
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN15
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN16
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN17
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN18
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN19
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN20
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN21
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN22
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN23
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN IN24
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si25
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si24
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si23
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si22
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si21
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si20
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si19
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si18
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si17
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si16
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si15
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_si14
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so13
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so12
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so11
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so10
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN test_so9
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+ - PIN pcmd_valid
+   + PROPERTY ACCESS_DIRECTION "0 top" ;
+END PINPROPERTIES
+END DESIGN
